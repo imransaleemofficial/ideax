@@ -1,0 +1,27 @@
+.cardsname{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.Carousel-Founders-Cards{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 7%;
+    background-color: #EBEDF0 !important; 
+}
+
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.carousel-control-prev-icon {
+    background-color: black;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.carousel-control-next-icon:hover{
+    background-color: none;
+}

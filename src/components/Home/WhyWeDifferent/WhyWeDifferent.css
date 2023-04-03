@@ -1,0 +1,307 @@
+@font-face {
+    font-family: 'Oswald';
+    
+}
+
+.image{
+    position: absolute;
+    width: 708px;
+    height: 600px;
+    left: 0px;
+}
+.girlimage{
+    position: relative;
+}
+
+.robototext{
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 22px;
+    color: #06AAB5;
+    margin-left: 7%;
+    margin-top: 10%;
+}
+.robototext1{
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 22px;
+    color: #06AAB5;
+    margin-left: 3.5%;
+    margin-right: 7%;
+}
+.sectionboldtext{
+    font-family: "Oswald";
+    font-weight: bold;
+    font-size: 35px;
+    color: black;
+    margin-left: 7%;
+    margin-top: 0;
+    line-height: -15px !important;
+}
+
+.robototext2{
+    font-family: "Roboto";
+    font-weight: lighter;
+    font-size: 15px;
+    color: #5B6472;
+    margin-left: 7%;
+    margin-top: 0;
+    margin-right: 7%;
+}
+
+
+.table, th, td {
+    border:1px solid white !important;
+    padding-left: 7%;
+  }
+
+.robotobold{
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 12px;
+    color: #5B6472;
+}
+.paratext{
+    font-family: "Roboto";
+    font-weight: lighter;
+    font-size: 15px;
+    color: #5B6472;
+    margin-left: 7%;
+    margin-top: 0;
+    
+}
+
+
+.paratext2{
+    font-family: "Roboto";
+    font-weight: lighter;
+    font-size: 15px;
+    color: #5B6472;
+    margin-left: 7%;
+    margin-top: 0;
+}
+
+.button-arrow{
+    border-radius: 20px 20px !important;
+    margin-left: 7%;
+    font-weight: bold !important;
+}
+
+.apphand{
+    height: 500px;
+    float: right;
+}
+
+.robototext3 {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 22px;
+    color: #06AAB5;
+    margin-left: 4%;
+    margin-top: 6%;
+}
+.why-we-differ{
+    background-color: #EBEDF0;
+}
+@media only screen and (max-width: 1440px) {
+    
+    .robototext{
+        margin-left: 4%;
+    }
+    
+    .sectionboldtext{
+        margin-left: 4%;
+    }
+    
+    .robototext2{
+        margin-left: 4%;
+    }
+    
+    
+    .table, th, td {
+        padding-left: 4%;
+      }
+    
+    .paratext{
+        margin-left: 4%;
+    }
+    
+    .paratext2{
+        margin-left: 4%;
+    }
+    
+    .button-arrow{
+        margin-left: 4%;
+    }
+  
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .image{
+        height: 700px;
+        width: 370px; 
+    }
+    .robototext{
+        margin-left: 4%;
+    }
+    
+    .sectionboldtext{
+        margin-left: 4%;
+    }
+    
+    .robototext2{
+        margin-left: 4%;
+    }
+    
+    
+    .table, th, td {
+        padding-left: 4%;
+      }
+    
+    .paratext{
+        margin-left: 4%;
+    }
+    
+    .paratext2{
+        margin-left: 4%;
+    }
+    
+    .button-arrow{
+        margin-left: 4%;
+    }
+  
+  }
+
+  @media only screen and (max-width: 768px) {
+    .image {
+        height: 385px;
+        width: 768px;
+    }
+    .robototext{
+        margin-left: 1%;
+        margin-top: 400px;
+    }
+    
+    .sectionboldtext{
+        margin-left: 1%;
+    }
+    
+    .robototext2{
+        margin-left: 1%;
+    }
+    
+    
+    .table, th, td {
+        padding-left: 1%;
+      }
+    
+    .paratext{
+        margin-left: 1%;
+        margin-right: 4%;
+    }
+    
+    .paratext2{
+        margin-left: 1%;
+        margin-right: 4%;
+    }
+    
+    .button-arrow{
+        margin-left: 1%;
+    }
+    .cocoonconvheading{
+        top: 150% !important;
+        margin-top: 350px;
+    }
+  
+  }
+
+  @media only screen and (max-width: 425px) {
+    .image {
+        height: 383px;
+        width: 425px;
+    }
+    .robototext{
+        margin-left: 1%;
+        margin-top: 400px;
+    }
+    
+    .sectionboldtext{
+        margin-left: 1%;
+    }
+    
+    .robototext2{
+        margin-left: 1%;
+    }
+    
+    
+    .table, th, td {
+        padding-left: 1%;
+      }
+    
+    .paratext{
+        margin-left: 1%;
+        margin-right: 4%;
+    }
+    
+    .paratext2{
+        margin-left: 1%;
+        margin-right: 4%;
+    }
+    
+    .button-arrow{
+        margin-left: 1%;
+        font-size: 12px;
+    }
+    .cocoonconvheading {
+        top: 150% !important;
+        margin-top: 243px;
+    }
+    .robototext1 {
+        margin-left: 0.5%;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .image {
+        height: 383px;
+        width: 375px;
+    }
+    .robototext {
+        font-size: 20px;
+    }
+    .sectionboldtext {
+        font-size: 28px;
+    }
+    .robototext2 {
+        font-size: 12px;
+    }
+    .paratext {
+        font-size: 12px;
+    }
+    .robotobold {
+        font-size: 9px;
+    }
+    .paratext2 {
+        font-size: 12px;
+    }
+    .button-arrow{
+        font-size: 12px !important;
+    }
+    .cocoonconvheading {
+        margin-top: 316px;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    .image {
+        height: 383px;
+        width: 320px;
+    }
+    .cocoonconvheading{
+        top: 150% !important;
+    }
+  }
+
+
+
+ 

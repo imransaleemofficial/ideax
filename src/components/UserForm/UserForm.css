@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Oswald";
+}
+
+.form-control{
+    width: 46% !important;
+    border-radius: 20px 20px !important;
+}
+
+.placeholer{
+    font-size: 10px;
+}
+.float-right{
+    margin-left: 54% !important;
+    border: none !important;
+}
+.cent-headings{
+    text-align: center;
+    font-family: "Oswald";
+    font-weight: bold;
+}
+.filloutline{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 20px !important;
+}
+.form-section-container {
+    background-color: #EBEDF0;
+    padding-bottom: 2% !important;
+}
+.questions-form-control {
+    padding-bottom: 190px !important;
+    border: none !important;
+}
+.ref-form-control {
+    padding-right: 20px !important;
+    width: 328px !important;
+    border: none !important;
+}
+.refer-line{
+    font-family: "Inter";
+    color: #5B6472;
+    font-size: 10px !important;
+}
+.which-products-line{
+    font-family: "Roboto";
+    font-weight: lighter;
+    text-align: center;
+    font-size: 20px !important;
+}
+
+
+@media (max-width:1024px) {
+    .questions-form-control {
+        padding-right: 320px !important;
+    }
+}
+
+@media (max-width:768px) {
+    .float-right {
+        margin-left: 28% !important;
+    }
+    .questions-form-control {
+        margin-left: 28% !important;
+    }
+    
+    .refer-line {
+        margin-left: 28% !important;
+    }
+   
+}
+
+@media (max-width: 425px) {
+    .questions-form-control {
+        margin-left: 8% !important;
+    }
+    .refer-line {
+        margin-left: 9% !important;
+    }
+}
+
+@media (max-width:375px) {
+    .questions-form-control {
+        margin-left: 2% !important;
+    }
+    .refer-line {
+        margin-left: 3% !important;
+    }   
+    .which-products-line {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width:320px) {
+    .questions-form-control {
+        padding-right: 268px !important;
+    }
+    .ref-form-control {
+        width: 284px !important;
+    }
+    .which-products-line {
+        font-size: 13px !important;
+    }
+    .filloutline {
+        font-size: 16px !important;
+    }
+}

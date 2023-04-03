@@ -1,0 +1,24 @@
+nav.navbar-color.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top {
+    background-color: #EBEDF0 !important;
+}
+.input-search{
+    font-size: 14px !important;
+}
+.search-button{
+    border-radius: 50px 50px !important;
+}
+.navbar-font{
+    font-family: "Roboto";
+   
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-family: "Roboto";
+    font-weight: 900;
+}
+Nav.Link:active{
+    color: blueviolet;
+}
+
+a:active{
+    color: slateblue;
+}

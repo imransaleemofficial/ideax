@@ -1,0 +1,136 @@
+input{
+    display: flex;
+}
+.laptop-image-seller{
+    width: 800px;
+    margin-top: 25%;
+}
+.register-entrepreneur{
+    font-family: "Fasthand";
+    font-weight: 900;
+    margin-left: 5%;
+}
+.sellerformpic{
+    width: 600px;
+    height: 800px;
+    margin-top: 20%;
+}
+.seller-form-button{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  align-items: center;
+}
+.name-label{
+    font-family: "Nunito";
+    font-weight: 900;
+}
+.name{
+    padding-right: 100px;
+    margin-bottom: 6%;
+    font-family: "Nunito";
+}
+.email{
+    padding-right: 150px;
+    margin-bottom: 6%;
+}
+.phone{
+    padding-right: 100px;
+    margin-bottom: 6%;
+}
+.idea{
+    padding-right: 200px;
+    margin-bottom: 6%;
+}
+.price{
+    margin-bottom: 6% !important;
+}
+
+.sellerform{
+    background-color: #ffffff;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+}
+.submitbtn{
+    border-radius: 20px;
+    border: 1px solid  #ff4828;
+    background-color: #ff4828;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-bottom: 6%;
+}
+input{
+    background-color: #eee;
+    border-radius: 25px 25px !important;
+    padding: 6px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+}
+.description{
+    width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  padding-right: 200px;
+  margin-bottom: 6%;
+}
+
+@media (max-width:1024px) {
+    .laptop-image-seller {
+        width: 500px;
+        margin-top: 25%;
+        margin-right: 15%;
+    }
+}
+
+@media (max-width:768px) {
+    .laptop-image-seller {
+        width: 769px;
+        margin-top: 0%;
+        margin-right: 15%;
+        margin-left: -12px;
+    }
+}
+
+@media (max-width: 425px) {
+    .register-entrepreneur {
+        text-align: center;
+        font-size: 34px;
+    }
+    .laptop-image-seller {
+        width: 425px;
+    }
+}
+
+@media (max-width: 375px) {
+    .laptop-image-seller {
+        width: 375px;
+    }
+}
+
+@media (max-width: 375px){
+.laptop-image-seller {
+    width: 320px;
+}
+}

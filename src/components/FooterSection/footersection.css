@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Inter";
+}
+
+.com-add{
+    text-decoration: none;
+    color: aliceblue !important;
+    font-family: "Inter";
+    font-size: 14px;
+    margin-left: 20%;
+}
+.com-add:hover{
+    color: aquamarine;
+}
+.footer-container{
+    background: linear-gradient(236.59deg, #0D0E0F 39.66%, #202123 79.05%);
+    padding-top: 3%;
+    padding-bottom: 0%;
+}
+
+.contacts {
+    color: aliceblue;
+    font-family: "Inter";
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: 20%;
+    margin-top: 10% !important;
+    margin-bottom: 5%;
+    margin-right: 20%;
+}
+
+.currentColor{
+    color: aliceblue !important;
+}
+
+.margin{
+    text-decoration: none;
+    color: aliceblue !important;
+    font-family: "Inter";
+    font-size: 14px;
+    margin-left: 23%;
+    margin-right: -18%;
+}
+
+.rights-reserved-line{
+    color: #B4B7BB;
+    margin-left: 5%;
+}
+
+.usimg{
+    margin-left: 60%;
+    width: 30px;
+}
+
+@media (max-width: 1024px) {
+    .usimg {
+        margin-left: 43%;
+    }
+}
+
+@media (max-width: 768px) {
+    .usimg {
+        margin-left: 31%;
+    }
+}
+
+@media (max-width: 425px) {
+    .rights-reserved-line {
+        font-size: 9px;
+    }
+    .usimg {
+        margin-left: 22%;
+    }
+}
+
+@media (max-width: 375px) {
+    .usimg {
+        margin-left: 13%;
+    }
+}
+
+@media (max-width: 320px) {
+    .usimg {
+        margin-left: 3%;
+    }   
+    .com-add{
+        font-size: 10px;
+    }
+}
