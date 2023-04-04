@@ -27,7 +27,7 @@ function Home(props) {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h1 className='h1'>#! IDEAX Buying & Selling Marketplace. 
+          <h1 className='h1'>#! IDEAX Buying & Selling Marketplace Globally. 
           <br/>
           <br/>
           <Form className="d-flex">
