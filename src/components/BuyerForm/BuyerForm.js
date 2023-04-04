@@ -6,6 +6,7 @@ import BuyerDropZone from '../BuyerDropZone/BuyerDropZone';
 import '../BuyerForm/BuyerForm.css';
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
 
+
 function BuyerForm() {
 
   const initialValues = {

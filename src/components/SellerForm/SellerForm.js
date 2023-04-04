@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Dropzone from 'react-dropzone';
 import Previews from '../SellerDropZone/SellerDropZone';
 import '../SellerForm/SellerForm.css';
 
