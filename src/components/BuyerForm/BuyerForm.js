@@ -190,9 +190,9 @@ function BuyerForm() {
         </Col>
 
         <Col>
-        <Accordion defaultActiveKey="0">
+        <Accordion defaultActiveKey="0" flush>
       <Accordion.Item eventKey="0">
-        <Accordion.Header>Click to see Requirements to fill the form.</Accordion.Header>
+        <Accordion.Header className='req-line-font'>Click to see Requirements to fill the form.</Accordion.Header>
         <Accordion.Body>
         <p >
           <br></br>

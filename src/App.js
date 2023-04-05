@@ -9,6 +9,8 @@ import SellerForm from "./components/SellerForm/SellerForm";
 import IdeaxNavbar from "./components/IdeaxNavbar/IdeaxNavbar";
 import BuyerForm from "./components/BuyerForm/BuyerForm.js"
 import FooterSection from "./components/FooterSection/footersection";
+import SellerSide from "./components/SellerSide/SellerSide";
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -49,6 +51,7 @@ function App() {
           <Route path="/investor" element={<BuyerForm />} />
           <Route path="/home" element={<Home name={userName} />} />
           <Route path="/" element={<Home name={userName} />} />
+          <Route path="/entrepreneurs" element={<SellerSide />} />
         </Routes>
       </Router>
 

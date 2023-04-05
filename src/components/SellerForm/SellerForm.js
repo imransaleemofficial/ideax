@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Previews from '../SellerDropZone/SellerDropZone';
 import '../SellerForm/SellerForm.css';
-
+import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import UserCard from './UserCard';
 
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
 
@@ -17,9 +18,12 @@ function SellerForm() {
     description: '',
     price: '',
   }
+  const [data, setdata] = useState([]);
+  
   const [formData, setFormData] = useState(initialValues);
   const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState({});
+
 
   const validation = (values) => {
     const errors = {};
@@ -112,12 +116,18 @@ function SellerForm() {
     event.preventDefault();
     // TODO: Send data and files to server using API
    
+
     const newErrors = validation(formData);
     setErrors(newErrors);
       console.log("errors" , errors)
     if (Object.keys(newErrors).length === 0) {
     }
+    debugger
+    setdata([...data, formData]);
+    setFormData({...formData , ...initialValues})
   }
+
+  console.log("data" , data);
 
   function handlePhoneKeyPress(event) {
     const keyCode = event.keyCode || event.which;
@@ -126,6 +136,8 @@ function SellerForm() {
       event.preventDefault();
     }
   }
+
+  
 
   return (
     
@@ -167,7 +179,7 @@ function SellerForm() {
       
       <label className='name-label'>
         Description:
-        <input type="text" name="description" value={formData.description} onChange={handleInputChange} className='description'/>
+        <textarea type="text" name="description" value={formData.description} onChange={handleInputChange} className='description'/>
       </label>
       {errors.description && <p className='error-msg'>{errors.description}</p>}
       
@@ -187,13 +199,58 @@ function SellerForm() {
       <button type="submit" className='submitbtn'>Submit</button>
     
     </form>
+  
+     
         </Col>
 
         <Col>
+        <Accordion defaultActiveKey="0" flush>
+      <Accordion.Item eventKey="0">
+        <Accordion.Header className='req-line-font'>Click to see Requirements to fill the form.</Accordion.Header>
+        <Accordion.Body>
+        <p >
+          <br></br>
+     **************************************************************************************
+        <p>   
+        !REQUIREMENTS TO FILL THE FORM!  
+            <br></br>                                                                                                                                                          
+            <br></br>                                                                                                                                                          
+        1. All fields are required. You need to fill all fields to continue.
+            <br></br>
+        2. Name should start with a capital letter and only contain letters and spaces.
+            <br></br>  
+        3. Phone number should have between 7 to 15 digits           
+            <br></br> 
+        4. Phone number should have between 7 to 15 digits           
+            <br></br>                     
+        5. Idea Name should start with a capital letter         
+            <br></br>                         
+        6. About Yourself should contain between 50 and 1000 words       
+            <br></br>                
+        7. Price must be a positive number greater than zero              
+            <br></br>                               
+        </p>                                                                                                                                                                                                                                                  
+     **************************************************************************************  
+        </p>
+        </Accordion.Body>
+      </Accordion.Item>
+        </Accordion>
         <img className='laptop-image-seller' src={laptopimage} alt="laptop"/>
+        
         </Col>
 
 
+      </Row>
+      <Row>
+      <div className="card-container">
+        {data.map((item) => (
+          <div className="card" key={item.id}>
+            <h2>{item.name}</h2>
+            <p>{item.email}</p>
+          </div>
+        ))}
+         
+      </div>
       </Row>
     </Container>
     </div>

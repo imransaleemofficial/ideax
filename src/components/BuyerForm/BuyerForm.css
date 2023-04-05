@@ -12,3 +12,7 @@
 .requirements{
     color: red;
 }
+.req-line-font{
+    font-family: "Roboto";
+    font-weight: 900;
+}

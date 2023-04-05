@@ -23,8 +23,9 @@ function IdeaxNavbar() {
             <Nav.Link href="home" className='navbar-font'>HOME</Nav.Link>
             <Nav.Link href="login" className='navbar-font'>LOGIN</Nav.Link>
             <Nav.Link href="signup" className='navbar-font'>SIGNUP</Nav.Link>
-            <Nav.Link href="entrepreneur" className='navbar-font'>ENTREPRENEUR</Nav.Link>
-            <Nav.Link href="investor" className='navbar-font'>INVESTOR</Nav.Link>
+            <Nav.Link href="entrepreneur" className='navbar-font'>SIGN IN AS ENTREPRENEUR</Nav.Link>
+            <Nav.Link href="investor" className='navbar-font'>SIGN IN AS INVESTOR</Nav.Link>
+            <Nav.Link href="entrepreneurs" className='navbar-font'>ENTREPRENEURS</Nav.Link>
             <NavDropdown title="Link" id="navbarScrollingDropdown" className='navbar-font'>
               <NavDropdown.Item href="#action3" className='navbar-font'>Action</NavDropdown.Item>
               <NavDropdown.Item href="#action4" className='navbar-font'>
