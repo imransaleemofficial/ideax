@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import BuyerDropZone from '../BuyerDropZone/BuyerDropZone';
 import '../BuyerForm/BuyerForm.css';
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
+import Accordion from 'react-bootstrap/Accordion';
 
 function BuyerForm() {
 
@@ -189,7 +190,11 @@ function BuyerForm() {
         </Col>
 
         <Col>
-        <p className='requirements'>
+        <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Click to see Requirements to fill the form.</Accordion.Header>
+        <Accordion.Body>
+        <p >
           <br></br>
      **************************************************************************************
         <p>   
@@ -211,6 +216,9 @@ function BuyerForm() {
         </p>                                                                                                                                                                                                                                                  
      **************************************************************************************  
         </p>
+        </Accordion.Body>
+      </Accordion.Item>
+        </Accordion>
         <img className='laptop-image' src={laptopimage} alt="laptop"/>
         </Col>
 
