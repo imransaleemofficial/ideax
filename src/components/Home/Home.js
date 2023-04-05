@@ -3,8 +3,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from "react-bootstrap/esm/Button";
 import '../Home/Home.css';
-
-import carousel_image from '../source/images/Homepage_images/carousel_image_one.jpg';
 import carousel_image_two from '../source/images/Homepage_images/carousel_image_two.jpg';
 import carousel_image_three from '../Home/images/carousel_image_three.jpg';
 import carousel_image_one from '../Home/images/carousel_image_one.jpg';

@@ -19,6 +19,7 @@ function BuyerForm() {
     price: '',
   }
   const [formData, setFormData] = useState(initialValues);
+  const [data, setdata] = useState([]);
   const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState({});
 
@@ -113,11 +114,18 @@ function BuyerForm() {
     event.preventDefault();
     // TODO: Send data and files to server using API
    
+
     const newErrors = validation(formData);
     setErrors(newErrors);
       console.log("errors" , errors)
     if (Object.keys(newErrors).length === 0) {
     }
+    debugger
+    if (Object.keys(formData).length === 0) {
+      setdata([...data, formData]);
+    }
+   
+    setFormData({...formData , ...initialValues})
   }
 
   function handlePhoneKeyPress(event) {
@@ -221,8 +229,17 @@ function BuyerForm() {
         </Accordion>
         <img className='laptop-image' src={laptopimage} alt="laptop"/>
         </Col>
-
-
+      </Row>
+      <Row>
+      <div className="card-container">
+        {data.map((item) => (
+          <div className="card" key={item.id}>
+            <h2>{item.name}</h2>
+            <p>{item.email}</p>
+          </div>
+        ))}
+         
+      </div>
       </Row>
     </Container>
     </div>

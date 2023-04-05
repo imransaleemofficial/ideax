@@ -5,7 +5,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import UserCard from './UserCard';
+
 
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
 
@@ -125,6 +125,12 @@ function SellerForm() {
     debugger
     setdata([...data, formData]);
     setFormData({...formData , ...initialValues})
+    // if (Object.keys(formData).length === 0) {
+    //   setdata([...data, formData]);
+    // }
+    // setFormData({...formData , ...initialValues})
+    
+    
   }
 
   console.log("data" , data);
