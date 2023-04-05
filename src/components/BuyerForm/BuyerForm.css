@@ -6,6 +6,9 @@
 }
 
 .laptop-image{
-    width: 800px;
-    margin-top: 20%;
+    width: 600px;
+    margin-top: 10%;
+}
+.requirements{
+    color: red;
 }

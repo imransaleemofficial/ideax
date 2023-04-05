@@ -6,7 +6,6 @@ import BuyerDropZone from '../BuyerDropZone/BuyerDropZone';
 import '../BuyerForm/BuyerForm.css';
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
 
-
 function BuyerForm() {
 
   const initialValues = {
@@ -190,6 +189,28 @@ function BuyerForm() {
         </Col>
 
         <Col>
+        <p className='requirements'>
+          <br></br>
+     **************************************************************************************
+        <p>   
+        !REQUIREMENTS TO FILL THE FORM!  
+            <br></br>                                                                                                                                                          
+            <br></br>                                                                                                                                                          
+        1. All fields are required. You need to fill all fields to continue.
+            <br></br>
+        2. Name should start with a capital letter and only contain letters and spaces.
+            <br></br>  
+        3. Phone number should have between 7 to 15 digits           
+            <br></br>                     
+        4. Username should start with a capital letter          
+            <br></br>                         
+        5. About Yourself should contain between 50 and 1000 words       
+            <br></br>                
+        6. Age should be between 14 and 100               
+            <br></br>                               
+        </p>                                                                                                                                                                                                                                                  
+     **************************************************************************************  
+        </p>
         <img className='laptop-image' src={laptopimage} alt="laptop"/>
         </Col>
 
