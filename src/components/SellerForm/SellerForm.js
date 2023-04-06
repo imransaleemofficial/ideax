@@ -154,110 +154,98 @@ function SellerForm() {
     </h1>
     <br></br>
       <Container fluid>
-      <Row>
-        <Col>
-        <form onSubmit={handleSubmit} className="sellerform">
-     
+          <Row>
+            <Col>
+              <form onSubmit={handleSubmit} className="sellerform">
+                    <label className='name-label'>
+                      Name:
+                    <input type="text" name="name" value={formData.name} onChange={handleInputChange} onKeyPress={handleNameKeyPress} className="name"/>
+                    </label>
+                    {errors.name && <p className='error-msg'>{errors.name}</p>}
+                    
+                    <label className='name-label'>
+                      Email:
+                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="email"/>
+                    </label>
+                    {errors.email && <p className='error-msg'>{errors.email}</p>}
+                    
+                    <label className='name-label'>
+                      Phone:
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} onKeyPress={handlePhoneKeyPress} className="phone"/>
+                    </label>
+                    {errors.phone && <p className='error-msg'>{errors.phone}</p>}
+                    
+                    <label className='name-label'>
+                      Idea Name:
+                      <input type="text" name="idea" value={formData.idea} onChange={handleInputChange}  className="idea"/>
+                    </label>
+                    {errors.idea && <p className='error-msg'>{errors.idea}</p>}
+                    
+                    <label className='name-label'>
+                      Description:
+                      <textarea type="text" name="description" value={formData.description} onChange={handleInputChange} className='description'/>
+                    </label>
+                    {errors.description && <p className='error-msg'>{errors.description}</p>}
+                    
+                    <label className='name-label'>
+                      Price:
+                      <input type="number" name="price" value={formData.price} onChange={handleInputChange} className=""price/>
+                    </label>
+                    {errors.price && <p className='error-msg'>{errors.price}</p>}   
+                    <p>
+                      <Previews/>    
+                    </p>
+                    <button type="submit" className='submitbtn'>Submit</button>
+              </form>
+            </Col>
 
-      <label className='name-label'>
-      Name:
-      <input type="text" name="name" value={formData.name} onChange={handleInputChange} onKeyPress={handleNameKeyPress} className="name"/>
-      </label>
-      {errors.name && <p className='error-msg'>{errors.name}</p>}
-      
-      <label className='name-label'>
-        Email:
-        <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="email"/>
-      </label>
-      {errors.email && <p className='error-msg'>{errors.email}</p>}
-      
-      <label className='name-label'>
-        Phone:
-        <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} onKeyPress={handlePhoneKeyPress} className="phone"/>
-      </label>
-      {errors.phone && <p className='error-msg'>{errors.phone}</p>}
-      
-      <label className='name-label'>
-        Idea Name:
-        <input type="text" name="idea" value={formData.idea} onChange={handleInputChange}  className="idea"/>
-      </label>
-      {errors.idea && <p className='error-msg'>{errors.idea}</p>}
-      
-      <label className='name-label'>
-        Description:
-        <textarea type="text" name="description" value={formData.description} onChange={handleInputChange} className='description'/>
-      </label>
-      {errors.description && <p className='error-msg'>{errors.description}</p>}
-      
-      <label className='name-label'>
-        Price:
-        <input type="number" name="price" value={formData.price} onChange={handleInputChange} className=""price/>
-      </label>
-      {errors.price && <p className='error-msg'>{errors.price}</p>}
-      
-      
-      
-      <p>
-        <Previews/>
-      
-      </p>
-      
-      <button type="submit" className='submitbtn'>Submit</button>
-    
-    </form>
-  
-     
-        </Col>
-
-        <Col>
-        <Accordion defaultActiveKey="0" flush>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header className='req-line-font'>Click to see Requirements to fill the form.</Accordion.Header>
-        <Accordion.Body>
-        <p >
-          <br></br>
-     **************************************************************************************
-        <p>   
-        !REQUIREMENTS TO FILL THE FORM!  
-            <br></br>                                                                                                                                                          
-            <br></br>                                                                                                                                                          
-        1. All fields are required. You need to fill all fields to continue.
-            <br></br>
-        2. Name should start with a capital letter and only contain letters and spaces.
-            <br></br>  
-        3. Phone number should have between 7 to 15 digits           
-            <br></br> 
-        4. Phone number should have between 7 to 15 digits           
-            <br></br>                     
-        5. Idea Name should start with a capital letter         
-            <br></br>                         
-        6. About Yourself should contain between 50 and 1000 words       
-            <br></br>                
-        7. Price must be a positive number greater than zero              
-            <br></br>                               
-        </p>                                                                                                                                                                                                                                                  
-     **************************************************************************************  
-        </p>
-        </Accordion.Body>
-      </Accordion.Item>
-        </Accordion>
-        <img className='laptop-image-seller' src={laptopimage} alt="laptop"/>
-        
-        </Col>
-
-
-      </Row>
-      <Row>
-      <div className="card-container">
-        {data.map((item) => (
-          <div className="card" key={item.id}>
-            <h2>{item.name}</h2>
-            <p>{item.email}</p>
-          </div>
-        ))}
-         
-      </div>
-      </Row>
+            <Col>
+            <Accordion defaultActiveKey="0" flush>
+              <Accordion.Item eventKey="0">
+                <Accordion.Header className='req-line-font'>Click to see Requirements to fill the form.</Accordion.Header>
+                  <Accordion.Body>
+                      <p>
+                        <br></br>
+                        **************************************************************************************
+                      <p>   
+                      !REQUIREMENTS TO FILL THE FORM!  
+                          <br></br>                                                                                                                                                          
+                          <br></br>                                                                                                                                                          
+                      1. All fields are required. You need to fill all fields to continue.
+                          <br></br>
+                      2. Name should start with a capital letter and only contain letters and spaces.
+                          <br></br>  
+                      3. Phone number should have between 7 to 15 digits           
+                          <br></br> 
+                      4. Phone number should have between 7 to 15 digits           
+                          <br></br>                     
+                      5. Idea Name should start with a capital letter         
+                          <br></br>                         
+                      6. About Yourself should contain between 50 and 1000 words       
+                          <br></br>                
+                      7. Price must be a positive number greater than zero              
+                          <br></br>                               
+                      </p>                                                                                                                                                                                                                                                  
+                        **************************************************************************************  
+                      </p>
+                  </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+            <img className='laptop-image-seller' src={laptopimage} alt="laptop"/>
+            </Col>
+          </Row>
+          
+          <Row>
+                        <div className="card-container">
+                          {data.map((item) => (
+                            <div className="card" key={item.id}>
+                              <h2>{item.name}</h2>
+                              <p>{item.email}</p>
+                            </div>
+                          ))}
+                          
+                        </div>
+          </Row>
     </Container>
     </div>
     
