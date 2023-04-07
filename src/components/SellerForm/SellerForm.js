@@ -5,6 +5,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
@@ -19,7 +21,6 @@ function SellerForm() {
     price: '',
   }
   const [data, setdata] = useState([]);
-  
   const [formData, setFormData] = useState(initialValues);
   const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState({});
@@ -115,8 +116,6 @@ function SellerForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // TODO: Send data and files to server using API
-   
-
     const newErrors = validation(formData);
     setErrors(newErrors);
       console.log("errors" , errors)
@@ -128,9 +127,7 @@ function SellerForm() {
     // if (Object.keys(formData).length === 0) {
     //   setdata([...data, formData]);
     // }
-    // setFormData({...formData , ...initialValues})
-    
-    
+    // setFormData({...formData , ...initialValues}
   }
 
   console.log("data" , data);
@@ -239,11 +236,20 @@ function SellerForm() {
                         <div className="card-container">
                           {data.map((item) => (
                             <div className="card" key={item.id}>
-                              <h2>{item.name}</h2>
-                              <p>{item.email}</p>
+                              <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src="holder.js/100px180" />
+                                <Card.Body>
+                                  <Card.Title>{item.name}</Card.Title>
+                                  <Card.Text>{item.email}</Card.Text>
+                                  <Card.Text>{item.phone}</Card.Text>
+                                  <Card.Text>{item.idea}</Card.Text>
+                                  <Card.Text>{item.description}</Card.Text>
+                                  <Card.Text>{item.price}</Card.Text>
+                                  <Button variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                              </Card>
                             </div>
                           ))}
-                          
                         </div>
           </Row>
     </Container>

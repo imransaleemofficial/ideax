@@ -18,8 +18,9 @@ function BuyerForm() {
     age:'',
     price: '',
   }
-  const [formData, setFormData] = useState(initialValues);
   const [data, setdata] = useState([]);
+  
+  const [formData, setFormData] = useState(initialValues);
   const [files, setFiles] = useState([]);
   const [errors, setErrors] = useState({});
 
@@ -113,20 +114,21 @@ function BuyerForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // TODO: Send data and files to server using API
-   
-
     const newErrors = validation(formData);
     setErrors(newErrors);
       console.log("errors" , errors)
     if (Object.keys(newErrors).length === 0) {
     }
     debugger
-    if (Object.keys(formData).length === 0) {
-      setdata([...data, formData]);
-    }
-   
+    setdata([...data, formData]);
     setFormData({...formData , ...initialValues})
+    // if (Object.keys(formData).length === 0) {
+    //   setdata([...data, formData]);
+    // }
+    // setFormData({...formData , ...initialValues}
   }
+
+  console.log("data" , data);
 
   function handlePhoneKeyPress(event) {
     const keyCode = event.keyCode || event.which;
@@ -176,7 +178,7 @@ function BuyerForm() {
       
       <label className='name-label'>
         About Yourself:
-        <input type="text" name="about" value={formData.about} onChange={handleInputChange} className='description'/>
+        <textarea rows="" cols="" type="text" name="about" value={formData.about} onChange={handleInputChange} className='description'></textarea> 
       </label>
       {errors.about && <p className='error-msg'>{errors.about}</p>}
       
@@ -236,6 +238,11 @@ function BuyerForm() {
           <div className="card" key={item.id}>
             <h2>{item.name}</h2>
             <p>{item.email}</p>
+            <p>{item.phone}</p>
+            <p>{item.username}</p>
+            <p>{item.about}</p>
+            <p>{item.age}</p>
+            <p>{item.price}</p>
           </div>
         ))}
          

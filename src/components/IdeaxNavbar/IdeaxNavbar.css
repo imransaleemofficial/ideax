@@ -1,5 +1,5 @@
 nav.navbar-color.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top {
-    background-color: #EBEDF0 !important;
+    background-color: rgb(196, 187, 187);
 }
 .input-search{
     font-size: 14px !important;
@@ -22,3 +22,13 @@ Nav.Link:active{
 a:active{
     color: slateblue;
 }
+
+.navbar-font{
+    color: aliceblue;
+}
+
+.navbar-font a{
+    color: aliceblue;
+}
+
+

@@ -19,6 +19,7 @@ import WebFont from 'webfontloader';
 import { auth } from "./firebase";
 
 import "./App.css";
+import PrivacyPolicy from "./components/IdeaxNavbar/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -52,6 +53,7 @@ function App() {
           <Route path="/home" element={<Home name={userName} />} />
           <Route path="/" element={<Home name={userName} />} />
           <Route path="/entrepreneurs" element={<SellerSide />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         </Routes>
       </Router>
 
