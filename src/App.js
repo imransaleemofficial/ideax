@@ -19,6 +19,7 @@ import WebFont from 'webfontloader';
 import { auth } from "./firebase";
 
 import "./App.css";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
   const [userName, setUserName] = useState("");
@@ -42,9 +43,10 @@ function App() {
   return (
     <div style={{overflow: "hidden"}}>
      
-      <IdeaxNavbar />
+      {/* <IdeaxNavbar /> */}
       
       <Router>
+        <Sidebar>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -56,6 +58,7 @@ function App() {
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/useofcookies" element={<UseOfCookies />} />
         </Routes>
+        </Sidebar>
       </Router>
 
       <FooterSection />
