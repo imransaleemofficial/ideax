@@ -179,7 +179,7 @@ function SellerForm() {
                     {errors.idea && <p className='error-msg'>{errors.idea}</p>}
                     
                     <label className='name-label'>
-                      Description:
+                      Write Description:
                       <textarea type="text" name="description" value={formData.description} onChange={handleInputChange} className='description'/>
                     </label>
                     {errors.description && <p className='error-msg'>{errors.description}</p>}
