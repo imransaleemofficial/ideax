@@ -11,6 +11,7 @@ import FooterSection from "./components/FooterSection/footersection";
 import SellerSide from "./components/SellerSide/SellerSide";
 import PrivacyPolicy from "./components/IdeaxNavbar/PrivacyPolicy/PrivacyPolicy";
 import UseOfCookies from "./components/FooterSection/UseOfCookies/UseOfCookies";
+import PDFDownload from "./components/PDF/downloadPDF";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -57,6 +58,7 @@ function App() {
           <Route path="/entrepreneurs" element={<SellerSide />} />
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/useofcookies" element={<UseOfCookies />} />
+          <Route path="/termsofuse" element={<PDFDownload />} />
         </Routes>
      
       </Router>
