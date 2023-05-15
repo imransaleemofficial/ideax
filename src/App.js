@@ -5,7 +5,7 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import SellerForm from "./components/SellerForm/SellerForm";
-import IdeaxNavbar from "./components/IdeaxNavbar/IdeaxNavbar";
+import Mynav from "./components/Navbar/mynav";
 import BuyerForm from "./components/BuyerForm/BuyerForm.js"
 import FooterSection from "./components/FooterSection/footersection";
 import SellerSide from "./components/SellerSide/SellerSide";
@@ -46,7 +46,7 @@ function App() {
       {/* <IdeaxNavbar /> */}
       
       <Router>
-        <Sidebar>
+        <Mynav/>
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
@@ -58,7 +58,7 @@ function App() {
           <Route path="/privacypolicy" element={<PrivacyPolicy />} />
           <Route path="/useofcookies" element={<UseOfCookies />} />
         </Routes>
-        </Sidebar>
+     
       </Router>
 
       <FooterSection />

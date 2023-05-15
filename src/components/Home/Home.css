@@ -10,6 +10,10 @@
     margin-top: 6%;
     border-radius: 20px 20px;
   }
+  .img1{
+    width: 171px;
+    height: 180px;
+  }
 a{
     color: black !important;
     text-decoration: none;
@@ -71,7 +75,7 @@ a:active{
     font-family: "Oswald";
     font-weight: bold;
     text-align: center;
-    background-color: #EBEDF0;
+
 }
 .cover-image{
     height: 600px !important;

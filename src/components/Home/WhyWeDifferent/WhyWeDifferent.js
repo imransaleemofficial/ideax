@@ -14,9 +14,7 @@ const WhyWeDifferent = () => {
 <body>
 <Container fluid className='why-we-differ'>
       <Row>
-        <Col xxl={6} lg={4} md={12} xs={12} className='girlimage'>
-        <img src={image} className="image"></img>
-        </Col>
+        
         <Col xxl={6} lg={8} md={12} xs={12}>
         <p className='robototext'>The Reason Have Made For You To Visit This Website.</p>
         <h3 className='sectionboldtext'>Why We Are Different?</h3>
