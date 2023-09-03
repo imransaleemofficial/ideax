@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import Previews from '../SellerDropZone/SellerDropZone';
+
+import React, { useState, useEffect } from 'react';
 import '../SellerForm/SellerForm.css';
 import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-
-
 import laptopimage from '../source/images/BuyerFormImage/laptop.jpg';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import IdeaxNavbar from '../IdeaxNavbar/IdeaxNavbar';
 
 function SellerForm() {
   const initialValues = {
@@ -20,9 +19,9 @@ function SellerForm() {
     description: '',
     price: '',
   }
-  const [data, setdata] = useState([]);
+  
   const [formData, setFormData] = useState(initialValues);
-  const [files, setFiles] = useState([]);
+  
   const [errors, setErrors] = useState({});
 
 
@@ -50,11 +49,7 @@ function SellerForm() {
     } else if (!isIdeaNameStartsWithCapitalLetter(formData.idea)) {
       errors.idea = '*Idea Name should start with a capital letter';
     }
-    if (!values.description) {
-      errors.description = '*Idea Description is required';
-    } else if (!validateDescription(formData.description)) {
-      errors.description = "*Description should contain between 50 and 1000 words";
-    }
+  
     if (!values.price) {
       errors.price = '*Price is required';
     } else if (!isPositiveNumber(formData.price)) {
@@ -89,10 +84,7 @@ function SellerForm() {
     return !isNaN(parsedValue) && parsedValue > 0;
   }
 
-  function validateDescription(description) {
-    const words = description.trim().split(/\s+/);
-    return words.length >= 50 && words.length <= 1000;
-  }
+
 
   function handleNameKeyPress(event) {
     const keyCode = event.keyCode || event.which;
@@ -104,33 +96,66 @@ function SellerForm() {
 
   
 
-  const handleInputChange = (event) => {
+ 
+
+    const [ideas, setIdeas] = useState([]);
+
+  const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
+    setErrors({ ...errors, [name]: '' });
   };
 
-  const handleFileUpload = (acceptedFiles) => {
-    setFiles(acceptedFiles);
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setFormData({ ...formData, document: file });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // TODO: Send data and files to server using API
-    const newErrors = validation(formData);
-    setErrors(newErrors);
-      console.log("errors" , errors)
-    if (Object.keys(newErrors).length === 0) {
-    }
-    debugger
-    setdata([...data, formData]);
-    setFormData({...formData , ...initialValues})
-    // if (Object.keys(formData).length === 0) {
-    //   setdata([...data, formData]);
-    // }
-    // setFormData({...formData , ...initialValues}
-  }
 
-  console.log("data" , data);
+    // Perform form validation
+    const formErrors = validation(formData);
+    setErrors(formErrors);
+    const url = 'http://localhost:8000/submit-form';
+    const formDataToSend = new FormData();
+    alert("Form Submitted Successfully")
+
+    for (const key in formData) {
+      formDataToSend.append(key, formData[key]);
+    }
+
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        body: formDataToSend,
+      });
+
+      if (response.ok) {
+        // Form submitted successfully. Do something here (e.g., show a success message).
+        // Fetch the updated ideas list from the server.
+        fetchIdeas();
+      } else {
+        // Handle error cases (e.g., show an error message).
+      }
+    } catch (error) {
+      // Handle network errors (e.g., show an error message).
+    }
+  };
+
+  const fetchIdeas = async () => {
+    try {
+      const response = await fetch('http://localhost:8000/ideas');
+      const data = await response.json();
+      setIdeas(data);
+    } catch (error) {
+      console.error('Error fetching ideas:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchIdeas();
+  }, []);
 
   function handlePhoneKeyPress(event) {
     const keyCode = event.keyCode || event.which;
@@ -145,6 +170,7 @@ function SellerForm() {
   return (
     
     <div>
+      <IdeaxNavbar/>
       <h1 className="register-entrepreneur">
     <br></br>
     Register yourself as Entrepreneur & Rule the World!
@@ -156,41 +182,46 @@ function SellerForm() {
               <form onSubmit={handleSubmit} className="sellerform">
                     <label className='name-label'>
                       Name:
-                    <input type="text" name="name" value={formData.name} onChange={handleInputChange} onKeyPress={handleNameKeyPress} className="name"/>
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} onKeyPress={handleNameKeyPress} className="name"/>
                     </label>
                     {errors.name && <p className='error-msg'>{errors.name}</p>}
                     
                     <label className='name-label'>
                       Email:
-                      <input type="email" name="email" value={formData.email} onChange={handleInputChange} className="email"/>
+                      <input type="email" name="email" value={formData.email} onChange={handleChange} className="email"/>
                     </label>
                     {errors.email && <p className='error-msg'>{errors.email}</p>}
                     
                     <label className='name-label'>
                       Phone:
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} onKeyPress={handlePhoneKeyPress} className="phone"/>
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} onKeyPress={handlePhoneKeyPress} className="phone"/>
                     </label>
                     {errors.phone && <p className='error-msg'>{errors.phone}</p>}
                     
                     <label className='name-label'>
                       Idea Name:
-                      <input type="text" name="idea" value={formData.idea} onChange={handleInputChange}  className="idea"/>
+                      <input type="text" name="idea" value={formData.idea} onChange={handleChange}  className="idea"/>
                     </label>
                     {errors.idea && <p className='error-msg'>{errors.idea}</p>}
                     
                     <label className='name-label'>
                       Write Description:
-                      <textarea type="text" name="description" value={formData.description} onChange={handleInputChange} className='description'/>
+                      <textarea type="text" name="description" value={formData.description} onChange={handleChange} className='description'/>
                     </label>
-                    {errors.description && <p className='error-msg'>{errors.description}</p>}
+                    {/* {errors.description && <p className='error-msg'>{errors.description}</p>} */}
                     
                     <label className='name-label'>
                       Price:
-                      <input type="number" name="price" value={formData.price} onChange={handleInputChange} className=""price/>
+                      <input type="number" name="price" value={formData.price} onChange={handleChange} className=""price/>
                     </label>
                     {errors.price && <p className='error-msg'>{errors.price}</p>}   
                     <p>
-                      <Previews/>    
+                      <br>
+                      </br>
+                     <label className='name-label'>
+                      Upload File:
+                     </label>
+                    <input type="file" name="document" onChange={handleFileChange} />   
                     </p>
                     <button type="submit" className='submitbtn'>Submit</button>
               </form>
@@ -232,26 +263,8 @@ function SellerForm() {
             </Col>
           </Row>
           
-          <Row>
-                        <div className="card-container">
-                          {data.map((item) => (
-                            <div className="card" key={item.id}>
-                              <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="holder.js/100px180" />
-                                <Card.Body>
-                                  <Card.Title>{item.name}</Card.Title>
-                                  <Card.Text>{item.email}</Card.Text>
-                                  <Card.Text>{item.phone}</Card.Text>
-                                  <Card.Text>{item.idea}</Card.Text>
-                                  <Card.Text>{item.description}</Card.Text>
-                                  <Card.Text>{item.price}</Card.Text>
-                                  <Button variant="primary">Go somewhere</Button>
-                                </Card.Body>
-                              </Card>
-                            </div>
-                          ))}
-                        </div>
-          </Row>
+          <div>
+      </div>
     </Container>
     </div>
     

@@ -1,36 +1,51 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import '../IdeaxNavbar/IdeaxNavbar.css';
-import { AiOutlineFileSearch } from 'react-icons/ai';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import "../IdeaxNavbar/IdeaxNavbar.css";
+import { AiOutlineFileSearch } from "react-icons/ai";
 
 function IdeaxNavbar() {
   return (
-    <Navbar bg="light" expand="lg" sticky="top" className='navbar-color'>
-      <Container fluid className=''>
-        <Navbar.Brand href="#" className='navbar-font'>IDEAX</Navbar.Brand>
+    <Navbar bg="light" expand="lg" sticky="top" className="navbar-color">
+      <Container fluid className="">
+        <Navbar.Brand href="#" className="navbar-font">
+          IDEAX
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="home" className='navbar-font'>HOME</Nav.Link>
-            <Nav.Link href="login" className='navbar-font'>LOGIN</Nav.Link>
-            <Nav.Link href="signup" className='navbar-font'>SIGNUP</Nav.Link>
-            <Nav.Link href="entrepreneurs" className='navbar-font'>ENTREPRENEURS</Nav.Link>
-            <NavDropdown title="REGISTER YOURSELF" id="navbarScrollingDropdown" className='navbar-font'>
-              <NavDropdown.Item href="entrepreneur" className='navbar-font'>AS ENTREPRENEUR</NavDropdown.Item>
-              <NavDropdown.Item href="investor" className='navbar-font'>
-              AS INVESTOR
+            <Nav.Link href="home" className="navbar-font">
+              Home
+            </Nav.Link>
+            <Nav.Link href="login" className='navbar-font'>Login</Nav.Link>
+            <Nav.Link href="signup" className='navbar-font'>Signup</Nav.Link>
+            <Nav.Link href="entrepreneurs" className="navbar-font">
+              Entrepreneurs
+            </Nav.Link>
+            <Nav.Link href="businessmen" className="navbar-font">
+              Businessmen
+            </Nav.Link>
+            <NavDropdown
+              title="Register Yourself"
+              id="navbarScrollingDropdown"
+              className="navbar-font"
+            >
+              <NavDropdown.Item href="entrepreneur" className="navbar-font">
+                AS ENTREPRENEUR
+              </NavDropdown.Item>
+              <NavDropdown.Item href="investor" className="navbar-font">
+                AS INVESTOR
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5" className='navbar-font'>
+              <NavDropdown.Item href="#action5" className="navbar-font">
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
@@ -41,18 +56,21 @@ function IdeaxNavbar() {
               placeholder="Search For IDEAX"
               className="me-2 input-search"
               aria-label="Search"
-            
             />
-            <Button className='input-search search button' variant="outline-dark"><AiOutlineFileSearch /></Button>
+            <Button
+              className="input-search search button"
+              variant="outline-dark"
+            >
+              <AiOutlineFileSearch />
+            </Button>
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
+  );
 }
 
 export default IdeaxNavbar;
-
 
 // import React, { useState } from "react";
 // import { NavLink, Route, Switch } from 'react-router-dom';
@@ -93,7 +111,7 @@ export default IdeaxNavbar;
 //           <ul>
 //             <li>
 //               <NavLink to="home">Home</NavLink>
-              
+
 //             </li>
 //             <li>
 //               <NavLink to="login">Login</NavLink>

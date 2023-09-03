@@ -17,11 +17,12 @@ import UserForm from "../UserForm/UserForm";
 
 
 import { AiOutlineFileSearch } from 'react-icons/ai';
+import IdeaxNavbar from "../IdeaxNavbar/IdeaxNavbar";
 
 function Home(props) {
   return (
     <div>
-    
+      <IdeaxNavbar/>
 
       <h2 className="name-heading">
         <br></br>
@@ -31,9 +32,9 @@ function Home(props) {
         <br></br>
       </h2>
       
-      {/* <FounderSlider />
+      <FounderSlider />
       <WhyWeDifferent />
-      <UserForm /> */}
+      <UserForm />
 
       
 

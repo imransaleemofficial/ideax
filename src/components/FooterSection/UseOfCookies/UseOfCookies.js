@@ -1,9 +1,11 @@
 import React from 'react';
 import '../UseOfCookies/UseOfCookies.css';
+import IdeaxNavbar from '../../IdeaxNavbar/IdeaxNavbar';
 
 const UseOfCookies = () => {
   return (
     <div>
+        <IdeaxNavbar/>
         <h4 className='heading_useofcookies'>COOKIE POLICY IDEAX.pk </h4>
         <h1 className='heading_useofcookies'>The use of cookies on our website</h1>
         <p className='para_useofcookies'>When you visit our website, we place cookies on your computer or mobile device. These cookies are used to optimise your user experience. </p>

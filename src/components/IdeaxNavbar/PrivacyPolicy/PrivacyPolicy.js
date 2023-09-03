@@ -1,9 +1,11 @@
 import React from 'react';
 import '../PrivacyPolicy/PrivacyPolicy.css';
+import IdeaxNavbar from '../IdeaxNavbar';
 
 const PrivacyPolicy = () => {
   return (
     <div>
+      <IdeaxNavbar/>
         <h3 className='h11'>Privacy Statement</h3>
         <p className='p1'>IDEAX (“IDEAX” or “we” or “us”) cares about your privacy and is committed to processing your personal data in accordance with fair information practices and applicable data privacy laws.</p>
         <p className='p1'>This Privacy Statement (i) describes how we collect, use, protect, share, and transfer your personal data; and (ii) describes your choices and rights with respect to your personal data, and how to exercise those choices and rights with IDEAX.</p>
